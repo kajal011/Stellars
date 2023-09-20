@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Transfer</h1>
+    <div>
+        <label for="">Receiver Account No: </label>
+        <input type="text" name="receiver" required>
+    </div>
+    <div>
+        <label>Amount</label>
+        <input type="number" name="amount" id="amount" required>
+    </div>
+    <div>
+        <button onclick="submit()">Transfer</button>
+    </div>
+
+    <script>
+        function submit(){
+            alert("Amount Transferred successfully");
+        }
+    </script>
+</body>
+</html>

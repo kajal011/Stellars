@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheques</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Check Cheque Status</h1>
+    </header>
+    <div class="container">
+        <form id="chequeForm">
+            <label for="chequeNumber">Enter Cheque Number:</label>
+            <input type="text" id="chequeNumber" placeholder="Enter cheque number...">
+            <button type="button" onclick="checkChequeStatus()">Check Status</button>
+        </form>
+        <div id="chequeStatus"></div>
+    </div>
+
+    <script>
+        function checkChequeStatus() {
+            // In a real application, you would send a request to the server to check the cheque status.
+            // For this example, we'll simulate a response.
+            const chequeNumber = document.getElementById('chequeNumber').value;
+            const status = Math.random() < 0.5 ? 'Cleared' : 'Bounced';
+
+            const chequeStatusDiv = document.getElementById('chequeStatus');
+            chequeStatusDiv.innerHTML = `<p>Cheque Number: ${chequeNumber}</p>`;
+            chequeStatusDiv.innerHTML += `<p>Status: ${status}</p>`;
+        }
+    </script>
+</body>
+</html>
